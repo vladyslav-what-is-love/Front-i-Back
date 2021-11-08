@@ -1,0 +1,30 @@
+.container {
+
+	height: 1200px;
+	width: 80%;
+	background-color: gold;
+	margin: 0 auto;
+}
+
+.cl1 {
+	background-color: red;
+	height: 200px;
+}
+
+.cl2 {
+	height: 500px;
+	width: 30%;
+	background-color: blue;
+}
+
+.cl4 {
+	background-color: white;
+	width: 40%;
+	height: 500px;
+}
+
+.box {
+	display: flex;
+	flex-direction: row;
+
+}

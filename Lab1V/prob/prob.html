@@ -1,0 +1,606 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+    <link href="css.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2 align="center">ЗВІТИ ДО ЛАБОРАТОРНИХ РОБІТ <br> З ДИСИПЛІНИ "ОСНОВИ FRONT-END ТА BACK-END РОЗРОБОК"</h2>
+        <h2 align="right">БРИГАДА №5 СТУДЕНТИ ГРУПИ ІК-93 Паєвський Д.В. та Волкова М.І.</h2>
+    </header>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTabLab(event, 'lb1')">Лаб. №1</button>
+        <button class="tablinks" onclick="openTabLab(event, 'lb2')">Лаб. №2</button>
+        <button class="tablinks" onclick="openTabLab(event, 'lb3')">Лаб. №3</button>
+        <button class="tablinks" onclick="openTabLab(event, 'lb4')">Лаб. №4</button>
+        <button class="tablinks" onclick="openTabLab(event, 'lb5')">Лаб. №5</button>
+        <button class="tablinks" onclick="openTabLab(event, 'lb6')">Лаб. №6</button>
+        <button class="tablinks" onclick="openTabLab(event, 'lb7')">Лаб. №7</button>
+        <button class="tablinks" onclick="openTabLab(event, 'lb8')">Лаб. №8</button>
+        <button class="tablinks" onclick="openTabLab(event, 'lb9')">Лаб. №9</button>
+    </div>
+    <div id="lb1" class="tabcontent">
+        <h3 align="center">Лаб. №1</h3>
+        <table>
+            <tr>
+                <td>
+                    <div class="tab1">
+                        <button class="tablinks1" onclick="openTabInLab(event, 'tab1')">Опис предметного середовища</button><br><br><br>
+                        <button class="tablinks1" onclick="openTabInLab(event, 'tab2')">Тема Мета Місце розсташування роботи №1</button><br><br><br>
+                        <button class="tablinks1" onclick="openTabInLab(event, 'tab3')">Структура документа</button><br><br><br>
+                        <button class="tablinks1" onclick="openTabInLab(event, 'tab4')">HTML код таблиць</button><br><br><br>
+                        <button class="tablinks1" onclick="openTabInLab(event, 'tab5')">HTML код форми</button><br><br><br>
+                        <button class="tablinks1" onclick="openTabInLab(event, 'tab6')">HTML код спиcку</button><br><br><br>
+                        <button class="tablinks1" onclick="openTabInLab(event, 'tab7')">HTML код зображень</button><br><br><br>
+                        <button class="tablinks1" onclick="openTabInLab(event, 'tab8')">Висновок</button><br><br><br>
+                    </div>
+                </td>
+                <td class="tabcontenttd">
+                    <div id="tab1" class="tabcontent1">
+                        <h3>Опис предметного середовища</h3>
+                        <p>Відповідно до постановленої задічі Лаборатораної рроботи №1, було вирішено створити веб додаток <b>APP-notes</b>.</p>
+                        <p><b>APP-notes</b> - веб додаток який буде давати можливість керувати замітками та нотатками. До основного функціоналу належить:</p>
+                        <ul>
+                            <li>Створення акаунту користувача</li>
+                            <li>Створення заміток як в особистому кабінеті, так і в режимі гостя</li>
+                            <li>Редагування та видалення заміток</li>
+                            <li>Керування замітками, пошук, сормування</li>
+                        </ul>
+                        <p>Замітки кодного користувача зберіагатимуться в базі даних, та можуть бути доступні лише з особистого, тобто буде гарантована конфеденціальність даних кожного користувача. Також в планах, розробки даного веб застоунку є привязки
+                            заміток до Google календаря, та нагадування через електронну пошту.</p>
+                    </div>
+                    <div id="tab2" class="tabcontent1">
+                        <h3>Тема Мета Місце розсташування роботи №1</h3>
+                        <p><b>Тема:</b> Структура HTML-документа. Вибір предметної галузі. Робота з посиланнями, таблицями, зображеннями, формами в HTML-документі.</p>
+                        <p><b>Мета:</b> Придбати практичні навички роботи з HTML-документом, таблицями,формами, зображеннями, посиланнями. Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.</p>
+                        <p><b>Місце розташування:</b> <a href="https://github.com/PDVcoder/frontback-labs.git">https://github.com/PDVcoder/frontback-labs.git</a></p>
+                    </div>
+                    <div id="tab3" class="tabcontent1">
+                        <h3>Структура документа, опис тегів</h3>
+                        <h3>Тег - Table</h3>
+                        <h4 align="left">Опис:</h4>
+                        <p>
+                            Елемент "table" служить контейнером для елементів, що визначають вміст таблиці. Будь-яка таблиця складається з рядків і осередків, які задаються за допомогою тегів "tr" і "td" . Усередині "table" допустимо використовувати наступні елементи: "caption"
+                            , "col", "colgroup", "tbody", "td", "tfoot", "th", "thead" і "tr"
+                        </p>
+                        <h4 align="left">Атрибути:</h4>
+                        <ul>
+                            <li><b>align</b> - Визначає вирівнювання таблиці.</li>
+                            <li><b>background</b> - Задає фоновий малюнок у таблиці.</li>
+                            <li><b>bgcolor</b> - Колір фону таблиці.</li>
+                            <li><b>border</b> - Товщина рамки в пікселях.</li>
+                            <li><b>bordercolor</b> - Колір рамки.</li>
+                            <li><b>cellpadding</b> - Відступ від рамки до вмісту осередку.</li>
+                            <li><b>cellpacing</b> - Відстань між осередками.</li>
+                            <li><b>cols</b> - Число колонок в таблиці.</li>
+                            <li><b>frame</b> - Повідомляє браузеру, як відображати межі навколо таблиці.</li>
+                            <li><b>height</b> -Висота таблиці.</li>
+                            <li><b>rules</b> - Повідомляє браузеру, де відображати кордону між осередками.</li>
+                            <li><b>summary</b> - Повідомляє браузеру, де відображати кордону між осередками.</li>
+                            <li><b>width</b> - Ширина таблиці.</li>
+                        </ul>
+                        <h3>Тег - ol та ul</h3>
+                        <h4 align="left">Опис:</h4>
+                        <p>
+                            Елемент "table" служить контейнером для елементів, що визначають вміст таблиці. Будь-яка таблиця складається з рядків і осередків, які задаються за допомогою тегів "tr" і "td" . Усередині "table" допустимо використовувати наступні елементи: "caption"
+                            , "col", "colgroup", "tbody", "td", "tfoot", "th", "thead" і "tr"
+                        </p>
+                        <h4 align="left">Атрибути:</h4>
+                        <ul>
+                            <li><b>align</b> - Визначає вирівнювання таблиці.</li>
+                            <li><b>background</b> - Задає фоновий малюнок у таблиці.</li>
+                            <li><b>bgcolor</b> - Колір фону таблиці.</li>
+                            <li><b>border</b> - Товщина рамки в пікселях.</li>
+                            <li><b>bordercolor</b> - Колір рамки.</li>
+                            <li><b>cellpadding</b> - Відступ від рамки до вмісту осередку.</li>
+                            <li><b>cellpacing</b> - Відстань між осередками.</li>
+                            <li><b>cols</b> - Число колонок в таблиці.</li>
+                            <li><b>frame</b> - Повідомляє браузеру, як відображати межі навколо таблиці.</li>
+                            <li><b>height</b> -Висота таблиці.</li>
+                            <li><b>rules</b> - Повідомляє браузеру, де відображати кордону між осередками.</li>
+                            <li><b>summary</b> - Повідомляє браузеру, де відображати кордону між осередками.</li>
+                            <li><b>width</b> - Ширина таблиці.</li>
+                        </ul>
+                        <h3>Тег - img</h3>
+                        <p>
+                            Тег "img" призначений для відображення на веб-сторінці зображень в графічному форматі GIF, JPEG або PNG. Адреса файлу з картинкою задається через атрибут src . Якщо необхідно, то малюнок можна зробити посиланням на інший файл, помістивши тег "img" в контейнер
+                            "a" . При цьому навколо зображення відображається рамка, яку можна прибрати, додавши атрибут border = "0" в тег "img" .
+                        </p>
+                        <h4 align="left">Атрибути:</h4>
+                        <ul>
+                            <li><b>align</b> - Визначає як малюнок буде вирівнюватися по краю і спосіб обтікання текстом.</li>
+                            <li><b>alt</b> - Альтернативний текст для зображення.</li>
+                            <li><b>border</b> - Товщина рамки навколо зображення.</li>
+                            <li><b>height</b> - Висота зображення.</li>
+                            <li><b>hspace</b> - Горизонтальний відступ від зображення до навколишнього контенту.</li>
+                            <li><b>ismap</b> - Каже браузеру, що картинка є серверної картою-зображенням.</li>
+                            <li><b>longdesc</b> - Вказує адресу документа, де міститься анотація до картинки.</li>
+                            <li><b>lowsrc</b> - Адреса зображення низької якості.</li>
+                            <li><b>src</b> - Шлях до графічного файлу.</li>
+                            <li><b>vspace</b> - Вертикальний відступ від зображення до навколишнього контенту.</li>
+                            <li><b>width</b> - Ширина зображення.</li>
+                            <li><b>usemap</b> - Посилання на тег "map" , що містить координати для клієнтської карти-зображення.</li>
+                        </ul>
+
+                        <h3>Тег - form</h3>
+                        <p>
+                            Тег
+                            <form> устанавливает форму на веб-странице. Форма предназначена для обмена данными между пользователем и сервером. Область применения форм не ограничена отправкой данных на сервер, с помощью клиентских скриптов можно получить доступ
+                                к любому элементу формы, изменять его и применять по своему усмотрению.
+                        </p>
+                        <h4 align="left">Атрибути:</h4>
+                        <ul>
+                            <li><b>accept-charset</b> - Устанавливает кодировку, в которой сервер может принимать и обрабатывать данные.</li>
+                            <li><b>action</b> - Адрес программы или документа, который обрабатывает данные формы.</li>
+                            <li><b>autocomplete</b> - Включает автозаполнение полей формы.</li>
+                            <li><b>enctype</b> - Способ кодирования данных формы</li>
+                            <li><b>method</b> - Метод протокола HTTP.</li>
+                            <li><b>name</b> - Имя формы.</li>
+                            <li><b>novalidate</b> - Отменяет встроенную проверку данных формы на корректность ввода.</li>
+                            <li><b>target</b> - Имя окна или фрейма, куда обработчик будет загружать возвращаемый результат.</li>
+                        </ul>
+
+
+                    </div>
+                    <div id="tab4" class="tabcontent1">
+                        <h3>Код таблиці</h3>
+                        <xmp class="codetext">
+                            <table border="1">
+                                <tr>
+                                    <th>загловок 1</th>
+                                    <th>загловок 2</th>
+                                    <th>загловок 3</th>
+                                    <th>загловок 4</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                </tr>
+                            </table>
+                        </xmp>
+                        <h3>Відображення таблиці</h3>
+                        <table border="1">
+                            <tr>
+                                <th>загловок 1</th>
+                                <th>загловок 2</th>
+                                <th>загловок 3</th>
+                                <th>загловок 4</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div id="tab5" class="tabcontent1">
+                        <h3>Код форми</h3>
+                        <xmp class="codetext">
+                            <h2>HTML Forms</h2>
+                            <form>
+                                First name:<br>
+                                <input type="text " name="firstname " value="Mickey ">
+                                <br> Last name:<br>
+                                <input type="text " name="lastname " value="Mouse ">
+                                <br><br>
+                                <input type="submit " value="Submit ">
+                            </form>
+                        </xmp>
+                        <h3>Відображення форми</h3>
+                        <h2>HTML Forms</h2>
+                        <form>
+                            First name:<br>
+                            <input type="text" name="firstname" value="name">
+                            <br> Last name:<br>
+                            <input type="text" name="lastname" value="lastname">
+                            <br><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                    <div id="tab6" class="tabcontent1">
+                        <h3>Код списків</h3>
+                        <xmp class="codetext">
+                            <ul>
+                                <li> Одягнути спортивну форму</li>
+                                <li> Узяти м’яч</li>
+                                <li> Зібрати друзів</li>
+                                <li> Зіграти футбол</li>
+                            </ul>
+                            <ol start=3 type=A>
+                                <li> Одягнути спортивну форму</li>
+                                <li> Узяти м’яч</li>
+                                <li> Зібрати друзів</li>
+                                <li> Зіграти футбол</li>
+                            </ol>
+                        </xmp>
+                        <h3>Відображення списків</h3>
+                        <ul>
+                            <li> Одягнути спортивну форму </li>
+                            <li> Узяти м’яч </li>
+                            <li> Зібрати друзів </li>
+                            <li> Зіграти футбол </li>
+                        </ul>
+                        <ol start=3 type=A>
+                            <li> Одягнути спортивну форму </li>
+                            <li> Узяти м’яч </li>
+                            <li> Зібрати друзів </li>
+                            <li> Зіграти футбол </li>
+                        </ol>
+                    </div>
+                    <div id="tab7" class="tabcontent1 ">
+                        <h3>Код зображення</h3>
+                        <xmp class="codetext">
+                            <img src="imgs\Tomas.jpg" alt="Mr.Tomas" width="300px" height="300" border="2px">
+                        </xmp>
+                        <h3>Відображення зображення</h3>
+                        <img src="imgs\Tomas.jpg" alt="Mr.Tomas" width="300px" height="300" border="2px">
+                    </div>
+                    <div id="tab8" class="tabcontent1 ">
+                        <h3>Висновок</h3>
+                        <p><b>Висновок: </b> Виконунуючи дану лабораторну роботу ми здобули та вдосконалили практичні навички роботи з HTML-документами, таблицями, формами та посиланнями. Створено шаблон звітнього HTML-документу, в якому юуде розміжено звіти
+                            до лабораторних робіт </p>
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div id="lb2" class="tabcontent">
+        <h3 align="center">Лаб. №2</h3>
+        <table>
+            <tr>
+                <td>
+                    <div class="tab1">
+                        <button class="tablinks2" onclick="openTabInLab2(event, 'tab21')">Тема Мета Місце розсташування роботи №2</button><br><br><br>
+                        <button class="tablinks2" onclick="openTabInLab2(event, 'tab22')">Селектори</button><br><br><br>
+                        <button class="tablinks2" onclick="openTabInLab2(event, 'tab23')">Списки</button><br><br><br>
+                        <button class="tablinks2" onclick="openTabInLab2(event, 'tab24')">Ідентифікатори</button><br><br><br>
+                        <button class="tablinks2" onclick="openTabInLab2(event, 'tab25')">Плаваючі елементи</button><br><br><br>
+                        <button class="tablinks2" onclick="openTabInLab2(event, 'tab26')">Висновок</button><br><br><br>
+                    </div>
+                </td>
+                <td class="tabcontenttd">
+                    <div id="tab21" class="tabcontent1">
+                        <h3>Тема Мета Місце розсташування роботи №2</h3>
+                        <p><b>Тема:</b> Каскадні таблиці стилів. Селектори. Ідентифікатори. Стильове оформлення текстових елементів в html-документах.</p>
+                        <p><b>Мета:</b> Придбати практичні навички роботи з селекторами,ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими елементами, оформленням текстових елементів</p>
+                        <p><b>Місце розташування:</b> <a href="https://github.com/PDVcoder/frontback-labs.git">https://github.com/PDVcoder/frontback-labs.git</a></p>
+                    </div>
+                    <div id="tab22" class="tabcontent1">
+                        <h3>Сусідні та дочерні селектори</h3>
+                        <h3>Сусідній селектор</h3>
+                        <p>Сусідніми називаються елементи веб-сторінки, коли вони йдуть безпосередньо один за одним в коді документа.</p>
+                        <xmp class="codetext">
+                            <style>
+                                B+I {
+                                    color: red;
+                                    /* Красный цвет текста */
+                                }
+                            </style>
+                            <p>Lorem <b>ipsum </b> dolor sit amet, <i>consectetuer</i> adipiscing elit.</p>
+                            <p>Lorem ipsum dolor sit amet, <i>consectetuer</i> adipiscing elit.</p>
+                        </xmp>
+                        <style>
+                            B+I {
+                                color: red;
+                                /* Красный цвет текста */
+                            }
+                        </style>
+                        <p>Lorem <b>ipsum </b> dolor sit amet, <i>consectetuer</i> adipiscing elit.</p>
+                        <p>Lorem ipsum dolor sit amet, <i>consectetuer</i> adipiscing elit.</p>
+
+                        <h3>Дочерний селектор</h3>
+                        <p>Дочірнім називається елемент, який безпосередньо розташовується всередині батьківського елементу.</p>
+                        <xmp class="codetext">
+                            <style>
+                                DIV I {
+                                    /* Контекстный селектор */
+                                    color: green;
+                                    /* Зеленый цвет текста */
+                                }
+                                
+                                P>I {
+                                    /* Дочерний селектор */
+                                    color: red;
+                                    /* Красный цвет текста */
+                                }
+                            </style>
+                            <div>
+                                <p><i>Lorem ipsum dolor sit amet</i>, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet <i>dolore magna</i> aliguam erat volutpat.</p>
+                            </div>
+                        </xmp>
+                        <style>
+                            .test1 I {
+                                /* Контекстный селектор */
+                                color: green;
+                                /* Зеленый цвет текста */
+                            }
+                            
+                            .test1 P>I {
+                                /* Дочерний селектор */
+                                color: red;
+                                /* Красный цвет текста */
+                            }
+                        </style>
+                        <div class="test1">
+                            <p><i>Lorem ipsum dolor sit amet</i>, consectetuer adipiscing elit, sed diem nonummy nibh euismod tincidunt ut lacreet <i>dolore magna</i> aliguam erat volutpat.</p>
+                        </div>
+
+                        <h3>Cелектор атрибутів</h3>
+                        <xmp class="codetext">
+                            <style>
+                                Q {
+                                    font-style: italic;
+                                    /* Курсивное начертание */
+                                    quotes: "\00AB" "\00BB";
+                                    /* Меняем вид кавычек в цитате */
+                                }
+                                
+                                Q[title] {
+                                    color: maroon;
+                                    /* Цвет текста */
+                                }
+                            </style>
+
+                            <p>Продолжая известный закон Мерфи, который гласит: <q>Если неприятность 
+                                    может случиться, то она обязательно случится</q>, можем ввести свое наблюдение:
+                                <q title="Из законов Фергюссона-Мержевича">После того, как веб-страница 
+                                    будет корректно отображаться в одном браузере, выяснится, 
+                                    что она неправильно показывается в другом</q>.</p>
+                        </xmp>
+                        <style>
+                            .test2 Q {
+                                font-style: italic;
+                                /* Курсивное начертание */
+                                quotes: "\00AB" "\00BB";
+                                /* Меняем вид кавычек в цитате */
+                            }
+                            
+                            .test2 Q[title] {
+                                color: maroon;
+                                font-size: 30px;
+                                /* Цвет текста */
+                            }
+                        </style>
+                        <div class="test2">
+                            <p class="asd">Продолжая известный закон Мерфи, который гласит: <q>Если неприятность 
+                                может случиться, то она обязательно случится</q>, можем ввести свое наблюдение:
+                                <q title="Из законов Фергюссона-Мержевича">После того, как веб-страница 
+                                будет корректно отображаться в одном браузере, выяснится, 
+                                что она неправильно показывается в другом</q>.</p>
+                        </div>
+                        <h3>Універсальний селектор</h3>
+                        <p>Іноді потрібно встановити одночасно один стиль для всіх елементів веб-сторінки, наприклад, задати шрифт або зображення тексту. В цьому випадку допоможе універсальний селектор, який відповідає будь-якому елементу веб-сторінки.</p>
+                        <h4>Приклад</h4>
+                        <xmp class="codetext">
+                            <style>
+                                * {
+                                    font-family: sans-serif;
+                                }
+                            </style>
+                        </xmp>
+                        <p>Впливає на весь документ</p>
+
+                    </div>
+                    <div id="tab23" class="tabcontent1">
+                        <h3>Сусідні та дочерні селектори</h3>
+                        <h4>Приклад коду</h4>
+                        <xmp class="codetext">
+                            <style>
+                                .rounded {
+                                    counter-reset: li;
+                                    list-style: none;
+                                    font: 14px "Trebuchet MS", "Lucida Sans";
+                                    padding: 0;
+                                    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+                                    margin-left: 10px;
+                                }
+                                
+                                .rounded a {
+                                    position: relative;
+                                    display: block;
+                                    padding: .4em .4em .4em 2em;
+                                    margin: .5em 0;
+                                    background: #DAD2CA;
+                                    color: #444;
+                                    text-decoration: none;
+                                    border-radius: .3em;
+                                    transition: .3s ease-out;
+                                }
+                                
+                                .rounded a:hover {
+                                    background: #E9E4E0;
+                                }
+                                
+                                .rounded a:hover:before {
+                                    transform: rotate(360deg);
+                                }
+                                
+                                .rounded a:before {
+                                    content: counter(li);
+                                    counter-increment: li;
+                                    position: absolute;
+                                    left: -1.3em;
+                                    top: 50%;
+                                    margin-top: -1.3em;
+                                    background: #8FD4C1;
+                                    height: 2em;
+                                    width: 2em;
+                                    line-height: 2em;
+                                    border: .3em solid white;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    border-radius: 2em;
+                                    transition: all .3s ease-out;
+                                }
+                            </style>
+                            <ol class="rounded">
+                                <li><a href="#">Элемент списка</a></li>
+                                <li><a href="#">Элемент списка</a></li>
+                                <li><a href="#">Элемент списка</a></li>
+                                <li><a href="#">Элемент списка</a></li>
+                                <li><a href="#">Элемент списка</a></li>
+                            </ol>
+                        </xmp>
+                        <h4>Приклад</h4>
+                        <ol class="rounded">
+                            <li><a href="#">Элемент списка</a></li>
+                            <li><a href="#">Элемент списка</a></li>
+                            <li><a href="#">Элемент списка</a></li>
+                            <li><a href="#">Элемент списка</a></li>
+                            <li><a href="#">Элемент списка</a></li>
+                        </ol>
+                    </div>
+
+                    <div id="tab24" class="tabcontent1">
+                        <h3>Ідентифікатори</h3>
+                        <p>Ідентифікатор (званий також «ID селектор») визначає унікальне ім'я елемента, яке використовується для зміни його стилю і звернення до нього через скрипти.</p>
+                        <xmp class="codetext">
+                            <style>
+                                #help {
+                                    position: absolute;
+                                    left: 160px;
+                                    top: 50px;
+                                    width: 225px;
+                                    padding: 5px;
+                                    background: #f0f0f0;
+                                }
+                            </style>
+                            <div id="help">
+                                Этот элемент помогает в случае, когда вы находитесь в осознании того факта, что совершенно не понимаете, кто и как вам может помочь. Именно в этот момент мы и подсказываем, что помочь вам никто не сможет.
+                            </div>
+                        </xmp>
+
+                        <style>
+                            #help {
+                                left: 160px;
+                                top: 50px;
+                                width: 225px;
+                                padding: 5px;
+                                background: #f0f0f0;
+                            }
+                        </style>
+                        <div id="help">
+                            Этот элемент помогает в случае, когда вы находитесь в осознании того факта, что совершенно не понимаете, кто и как вам может помочь. Именно в этот момент мы и подсказываем, что помочь вам никто не сможет.
+                        </div>
+
+                    </div>
+
+                    <div id="tab25" class="tabcontent1">
+                        <h3>Плаваючі елементи</h3>
+                        <p>Плаваючими будемо називати такі елементи, які обтікають по контуру іншими об'єктами веб-сторінки, так і з текстом. Слід розуміти, що ніхто і ніде не плаває, тому правильніше говорити «обтічні елементи», але з іншого боку термін
+                            «плаваючий елемент» давно вже прижився, так що його і будемо використовувати надалі.</p>
+                        <p>Плаваючі елементи досить активно застосовуються при верстці і в основному служать для втілення таких завдань.</p>
+                        <ol>
+                            <li>Обтікання картинок текстом.</li>
+                            <li>Створення врізок.</li>
+                            <li>Розташування шарів по горизонталі (додавання колонок).</li>
+                        </ol>
+                        <h3>Приклад</h3>
+
+                        <p>
+                            <img src="imgs/Tomas.jpg" alt="Tomas" width="150px" height="150" border="2px" align="right" hspace="5" vspace="5">
+                        </p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore earum voluptatem ea? Tempore beatae cumque debitis, eos quae quidem magnam amet praesentium accusamus error molestiae illum, ipsam doloribus vero illo? Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Quos, dolores! Aspernatur, magnam placeat libero harum cumque dolore quis, mollitia vero temporibus alias fugiat omnis, a repellat corrupti laudantium minus. Cumque. Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Accusamus incidunt harum minima laboriosam repellat eaque asperiores iure laudantium praesentium! Autem reiciendis dicta voluptatem voluptas laboriosam dolorum fuga eos magni expedita.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur odit earum quisquam a ipsam. Nihil sint, asperiores qui optio obcaecati non veniam, provident perspiciatis consectetur vitae impedit sapiente similique quasi.
+                        </p>
+
+
+                    </div>
+                    <div id="tab26" class="tabcontent1">
+                        <h3>Висновок</h3>
+                        <p><b>Висновок: </b> В даній лабораторній роботі було здобуто практичні навички роботи з селекторами,ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими елементами,
+                            оформленням текстових елементів.
+
+                        </p>
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div id="lb3 " class="tabcontent ">
+        <h3>Лаб. №3</h3>
+        <p>Тут буде звіт</p>
+    </div>
+    <div id="lb4 " class="tabcontent ">
+        <h3>Лаб. №4</h3>
+        <p>Тут буде звіт</p>
+    </div>
+    <div id="lb5 " class="tabcontent ">
+        <h3>Лаб. №5</h3>
+        <p>Тут буде звіт</p>
+    </div>
+    <div id="lb6 " class="tabcontent ">
+        <h3>Лаб. №6</h3>
+        <p>Тут буде звіт</p>
+    </div>
+    <div id="lb7 " class="tabcontent ">
+        <h3>Лаб. №7</h3>
+        <p>Тут буде звіт</p>
+    </div>
+    <div id="lb8 " class="tabcontent ">
+        <h3>Лаб. №8</h3>
+        <p>Тут буде звіт</p>
+    </div>
+    <div id="lb9 " class="tabcontent ">
+        <h3>Лаб. №9</h3>
+        <p>Тут буде звіт</p>
+    </div>
+</body>
+
+</html>
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete

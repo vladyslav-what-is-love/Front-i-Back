@@ -1,0 +1,162 @@
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #74cbd6;
+    background-color: #c8e6e0;
+}
+
+.tab1 {
+    overflow: hidden;
+    border: 1px solid #74cbd6;
+    background-color: #c8e6e0;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: 0.3s;
+}
+
+.tab1 button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #93beb2;
+}
+
+.tab1 button:hover {
+    background-color: #93beb2;
+}
+
+.tab button.active {
+    background-color: #5160e2;
+    color: #fff;
+}
+
+.tab1 button.active {
+    background-color: #5160e2;
+    vertical-align: top;
+    color: #fff;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 2px solid #007562;
+    border-top: none;
+}
+
+.tabcontent1 {
+    display: none;
+    padding: 6px 12px;
+    border: 2px solid #007562;
+    margin-top: 0%;
+    min-height: 480px;
+}
+
+.tabcontenttd {
+    width: 95%;
+}
+
+h3 {
+    text-align: center;
+}
+
+.codetext {
+    border: 1px inset;
+    font-family: monospace;
+    padding: 5px !important;
+    background: #a1f8c5;
+    width: 100%;
+}
+
+p,
+ul,
+ol {
+    font-family: Arial;
+    font-size: 20px;
+}
+
+h4 {
+    font-family: Arial;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: Arial;
+    font-size: 30px;
+}
+
+
+/* list */
+
+.rounded {
+    counter-reset: li;
+    list-style: none;
+    font: 14px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    margin-left: 10px;
+}
+
+.rounded a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    margin: .5em 0;
+    background: #DAD2CA;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+}
+
+.rounded a:hover {
+    background: #E9E4E0;
+}
+
+.rounded a:hover:before {
+    transform: rotate(360deg);
+}
+
+.rounded a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #8FD4C1;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete

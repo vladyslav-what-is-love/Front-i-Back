@@ -1,0 +1,106 @@
+html, body{
+	width: 100%;
+}
+body {
+	min-width: 100%;	
+	font-family: Arial;
+	background-color: #ccc;
+}
+.all_site {
+	display: flex;
+	min-height: 100%;
+	overflow: hidden;
+	flex-direction: column;
+}
+
+.header {
+	text-align: center;
+	width: 100%;
+	height: 150px;
+	margin: 0, 0, 20, 0;
+}
+
+.container {
+
+	width: 100%;
+	background-color: red;
+	border: solid;
+	border-color: black;
+	margin: 20px 0;
+
+}
+.container h2 {
+	margin: 0;
+}
+.naming {
+	margin-bottom: 50px;
+}
+
+.buttonLab {
+	margin: 5px 0px 120px 0px;  	
+	
+}
+.buttonLabIn {
+	width: 1170px;
+	margin: 0 auto;
+  	 
+}
+
+.buttonLabIn button {
+	background-color: #ffa500;
+	float: left;
+	border: 1px solid;
+	border-radius: 5px;
+	width: 100px;
+	margin-left: 15px;
+
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+}
+.buttonLabIn :hover {
+	background-color: gold;
+}
+.content {
+
+
+}
+.button {
+	float: left;
+}
+
+.buttonStyle ul {
+	width: 220px;
+}
+.buttonStyle button {
+	background-color: #ffa500;
+	width: 210px;
+	padding: 15px;
+	border-radius: 15px;
+	text-align: center;
+}
+.buttonStyle li :hover {
+	background-color: gold;
+}
+
+.buttonStyle li {
+	list-style: none;
+	margin-bottom: 15px;
+}
+
+.outInfo {
+	width: 70%;
+	float: left;
+	margin-left: 50px;
+	
+
+}
+.outInfo img {
+	width: 800px;
+}
+a {
+
+	text-decoration: none;
+	color: black;
+}
+

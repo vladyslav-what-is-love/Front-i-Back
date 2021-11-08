@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/Lab1/css/frame.css"> 
+        <meta name = "author" content = "Балукова, Іващенко, Ковальчук, Луцай">
+        <title>Інші селектори</title>
+    </head>
+<body>
+    <div>
+        <h3>Дочерний селектор</h3>
+                        <p>Дочірнім називається елемент, який безпосередньо розташовується всередині батьківського елементу.</p>
+                        <xmp class="codetext">
+                            <style>
+                                DIV I {
+                                    /* Контекстный селектор */
+                                    color: green;
+                                    /* Зеленый цвет текста */
+                                }
+                                
+                                P>I {
+                                    /* Дочерний селектор */
+                                    color: red;
+                                    /* Красный цвет текста */
+                                }
+                            </style>
+                            <div>
+                                <p><i>Lorem ipsum dolor sit amet</i>, consectetuer adipiscing elit. <i>dolore magna</i> aliguam erat volutpat.</p>
+                            </div>
+                        </xmp>
+    </div>
+</body>
+</html>

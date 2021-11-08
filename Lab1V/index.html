@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lab1</title>
+	<link rel="stylesheet"  href="css/main.css">
+</head>
+<body>
+		<script src="script.js"></script>
+<div class="all_site">
+	<div class="header">
+		<div class="container">
+			<h2>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ <br>
+			З ДИСЦИПЛІНИ «ОСНОВИ FRONT-END ТА BACKEND РОЗРОБОК»</h2>
+		</div>
+		<div class="naming">
+			<h3>Бригада №7    Групи ІК-92, ІТ-93    Ковальчук Р. Іващенко В. Балукова В.</h3>
+		</div>
+	</div>
+	<div class="buttonLab">
+		<div class="buttonLabIn">
+			
+			<button  onclick="CreateButton(1)">Лабораторна робота №1</button>
+			<button  onclick="CreateButton(2)">Лабораторна робота №2</button>
+			<button  onclick="CreateButton(3)">Лабораторна робота №3</button>
+			<button  onclick="CreateButton(4)">Лабораторна робота №4</button>
+			<button  onclick="CreateButton(1)">Лабораторна робота №5</button>
+			<button  onclick="CreateButton(1)">Лабораторна робота №6</button>
+			<button  onclick="CreateButton(1)">Лабораторна робота №7</button>
+			<button  onclick="CreateButton(1)">Лабораторна робота №8</button>
+			<button  onclick="CreateButton(1)">Лабораторна робота №9</button>
+			
+		</div>
+	</div>
+		
+
+	<div class="content">
+		<div class="button">
+			<nav class="buttonStyle">
+				<ul class="ul_button">
+					<li>
+						<button  onclick="CreateButton(1)">Опис предметного середовища</button>
+					</li>
+					<li>
+						<button type="button" onclick="CreateButton(2)" id="testButton">Тема, Мета, Місце розташування</button>
+					</li>
+					<li>
+						<button type="button" onclick="CreateButton(3)" id="testButton">Структура документа</button>
+					</li>
+					<li>
+						<button type="button" onclick="CreateButton(4)" id="testButton">HTML-код ТАБЛИЦЬ</button>
+					</li>
+					<li>
+						<button type="button" onclick="CreateButton(5)" id="testButton">HTML-код ФОРМИ</button>
+					</li>
+					<li>
+						<button type="button" onclick="CreateButton(6)" id="testButton">HTML-код ЗОБРАЖЕННЯ</button>
+					</li>
+					<li>
+						<button type="button" onclick="CreateButton(7)" id="testButton">Висновки</button>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="outInfo">
+			<div class="divFrame">
+    			<iframe id="labframe" src="about:blank" frameBorder="0" 
+    			width="100%" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+500)+'px';"></iframe>
+			</div>
+			<!--<img class="clone" src="img\41.png" alt="Упс, халепа">-->
+		</div>
+	</div>
+</div>
+</body>
+</html>

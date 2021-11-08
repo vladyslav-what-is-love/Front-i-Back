@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/frame.css"> 
+        <meta name = "author" content = "Балукова, Іващенко, Ковальчук, Луцай">
+        <title>Селектори</title>
+    </head>
+<body>
+    <div>
+        <dl>До простих селекторам відносяться:</dl>
+            <dd>селектор типу</dd>
+            <dd>універсальний селектор</dd>
+            <dd>селектор ідентифікатора</dd>
+            <dd>селектор класу</dd>
+            <dd>псевдо-класи</dd>
+        <p></p>
+         <h3>Ідентифікатори</h3>
+                        <p>Ідентифікатор (званий також «ID селектор») визначає унікальне ім'я елемента, яке використовується для зміни його стилю і звернення до нього через скрипти.</p>
+                        <xmp class="codetext">
+                            <style>
+                                #help {
+                                    position: absolute;
+                                    left: 160px;
+                                    top: 50px;
+                                    width: 225px;
+                                    padding: 5px;
+                                    background: #f0f0f0;
+                                }
+                            </style>
+                            <div id="help">
+                                Этот элемент помогает
+                            </div>
+                        </xmp>
+
+                        <style>
+                            #help {
+                                left: 160px;
+                                top: 50px;
+                                width: 225px;
+                                padding: 5px;
+                                background: #f0f0f0;
+                            }
+                        </style>
+
+            <h2>Результат: </h2>
+                        <div id="help">
+                            Этот элемент помогает
+                        </div>
+    
+             <h3>Сусідні та дочерні селектори</h3>
+                        <h4>Приклад коду</h4>
+                        <xmp class="codetext">
+                            <style>
+                                .rounded {
+                                    counter-reset: li;
+                                    list-style: none;
+                                    font: 14px "Trebuchet MS", "Lucida Sans";
+                                    padding: 0;
+                                    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+                                    margin-left: 10px;
+                                }
+                                
+                                .rounded a {
+                                    position: relative;
+                                    display: block;
+                                    padding: .4em .4em .4em 2em;
+                                    margin: .5em 0;
+                                    background: #DAD2CA;
+                                    color: #444;
+                                    text-decoration: none;
+                                    border-radius: .3em;
+                                    transition: .3s ease-out;
+                                }
+                                
+                                .rounded a:hover {
+                                    background: #E9E4E0;
+                                }
+                                
+                                .rounded a:hover:before {
+                                    transform: rotate(360deg);
+                                }
+                                
+                                .rounded a:before {
+                                    content: counter(li);
+                                    counter-increment: li;
+                                    position: absolute;
+                                    left: -1.3em;
+                                    top: 50%;
+                                    margin-top: -1.3em;
+                                    background: #8FD4C1;
+                                    height: 2em;
+                                    width: 2em;
+                                    line-height: 2em;
+                                    border: .3em solid white;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    border-radius: 2em;
+                                    transition: all .3s ease-out;
+                                }
+                            </style>
+                        </xmp>
+
+                                                </xmp>
+                        <style>
+                            .test2 Q {
+                                font-style: italic;
+                                /* Курсивное начертание */
+                                quotes: "\00AB" "\00BB";
+                                /* Меняем вид кавычек в цитате */
+                            }
+                            
+                            .test2 Q[title] {
+                                color: maroon;
+                                font-size: 30px;
+                                /* Цвет текста */
+                            }
+                        </style>
+                        <div class="test2">
+                            <p class="asd">Продолжая известный закон Мерфи, который гласит: <q>Если неприятность 
+                                может случиться, то она обязательно случится</q>, можем ввести свое наблюдение:
+                                <q title="Из законов Фергюссона-Мержевича">После того, как веб-страница 
+                                будет корректно отображаться в одном браузере, выяснится, 
+                                что она неправильно показывается в другом</q>.</p>
+                        </div>
+                        <h3>Універсальний селектор</h3>
+                        <p>Іноді потрібно встановити одночасно один стиль для всіх елементів веб-сторінки, наприклад, задати шрифт або зображення тексту. В цьому випадку допоможе універсальний селектор, який відповідає будь-якому елементу веб-сторінки.</p>
+                        <h4>Приклад</h4>
+                        <xmp class="codetext">
+                            <style>
+                                * {
+                                    font-family: sans-serif;
+                                }
+                            </style>
+                        </xmp>
+
+    </div>
+</body>
+</html>
