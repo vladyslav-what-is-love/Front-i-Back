@@ -36,14 +36,14 @@ let button_list = [
 	new ButtonText(9, ["Тема, Мета, Місце розташування", "Зовнішній вигляд макету", 
 		"HTML-код макету", "Розмітка сторінки за допомогою таблиці", "Розмітка сторінки за допомогою плаваючих блоків", 
 		"Висновок", "HTML-код сторінки завдання", "CSS-код завдання", "Висновки"],
-		["Lab3/tema", "Lab3/layuot", "Lab3/layuotHTML", "Lab3/table", "Lab3/float", "Lab3/sumup1", "Lab3/var7HTML", 
+		["Lab3/tema", "Lab3/layuot", "Lab3/layuotHTML", "Lab3/table", "Lab3/float", "Lab3/sumup1", "Lab3/var5HTML", 
 		"Lab3/css", "Lab3/sumup"]
 		),
 	new ButtonText(9, ["Постановка задачі Лабораторної роботи №4", "Спроби функціонального Застосування JS", 
 		"Схема URL", "Обробник подій", "Підстановка (entity)", 
 		"Вставка (script)", "Масиви 4п", "Виконання 6п", "ВИСНОВКИ"],
 		["Lab4/tema", "Lab4/connect", "Lab4/URL", "Lab4/handler", "Lab4/entity", "Lab4/script", 
-		"Lab4/array", "Lab4/calendar", "Lab4/sumup"]
+		"Lab4/array", "Lab4/SlideShow", "Lab4/sumup"]
 		)
 ]
 

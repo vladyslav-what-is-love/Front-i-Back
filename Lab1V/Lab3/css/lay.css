@@ -1,27 +1,47 @@
 .container {
 
-	height: 1200px;
+	height: 660px;
 	width: 80%;
 	background-color: gold;
 	margin: 0 auto;
 }
 
 .cl1 {
-	background-color: red;
-	height: 200px;
+	height: 80px;
+	color:yellow;
 }
-
 .cl2 {
-	height: 500px;
-	width: 30%;
+	height: 400px;
+	width: 25%;
 	background-color: blue;
 }
 
-.cl4 {
-	background-color: white;
-	width: 40%;
-	height: 500px;
+.cl3 {
+	background-color: red;
+	width: 25%;
+	height: 400px;
 }
+.cl4 {
+	background-color:white;
+	width: 25%;
+	height: 400px;
+}
+
+.cl5 {
+	background-color: red;
+	width: 25%;
+	height: 400px;
+}
+
+.cl6 {
+	background-color: red;
+	width: 25%;
+	height: 80px;
+}
+
+
+
+
 
 .box {
 	display: flex;

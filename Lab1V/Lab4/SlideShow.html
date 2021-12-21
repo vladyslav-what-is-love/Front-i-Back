@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="SlideScript.js"></script>
+	<title>Document</title>
+    <link rel="stylesheet"  href="css/SlideCSS.css">
+</head>
+<body>
+
+<div class="slideshow-container">
+
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="img/img1.jpg" style="width:100%">
+      <div class="text">Картинка раз</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="img/img2.jpg" style="width:100%">
+      <div class="text">Картинка два</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="img/img3.jpg" style="width:100%">
+      <div class="text">Картинка три</div>
+    </div>
+  
+    <!-- Вперед і назад кнопки -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- Кола піднизом -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <div class ="autoChange">
+    <h1>Для автоматичної зміни зображень</h1>	
+    <input type="text" placeholder="Кількість секунд" id="number">
+    <button onclick="showSlides()">Start</button>
+  </div>
+</body>
+</html>
