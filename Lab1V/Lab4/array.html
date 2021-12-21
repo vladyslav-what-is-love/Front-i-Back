@@ -7,17 +7,40 @@
 	<title>Array</title>
 </head>
 <body>
-	<h2>Введіть кількість елементів одновимірного масиву</h2>
-	<h1><input type="text" placeholder="Кількість" id="size"></h1>
-	<button onclick="array()">Start</button>
-
-	<div id="input"></div>
-	<div id="output1"></div>
 	<h2>Дана частина сортує введені числа та виводить кількість, між максимальним та мінімальним значеннями</h2>
 	<button onclick="creare_input()">Start</button>
 	<h1>	<input type=search placeholder="Ввід" id="num"></h1>
 
 	<div id="input"></div>
 	<div id="output"></div>
+
+	<xmp>
+	function creare_input() {
+	num = document.getElementById('num').value.split(' ');
+
+	for (let i = 0; i < num.length; i++) {
+		num[i] = Number(num[i]);
+	}
+	num = num.sort();
+
+	let array = [];
+	for (let i = 0; i < num.length; i++) {
+		console.log(Math.max(...num));
+		if (num[i] > Math.min(...num) && num[i] < Math.max(...num)) {
+			array.push(num[i]);
+		}
+	}
+
+
+	text = "Масив: " + num.join(", ") + " Між min i max " + array.join(", ")+ " К-ть між "+ array.length;
+	let output = document.getElementById('output');
+
+	data = document.createElement('h3');
+	data.setAttribute("id", "array");
+	data.textContent = text;
+
+  	output.appendChild(data);
+}
+	</xmp>
 </body>
 </html>

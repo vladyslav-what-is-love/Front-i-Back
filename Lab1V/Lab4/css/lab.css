@@ -43,3 +43,7 @@ div.outInfo {
     cursor: pointer;
     width: 100%;
 }
+
+p {
+    text-indent: 25px;
+}

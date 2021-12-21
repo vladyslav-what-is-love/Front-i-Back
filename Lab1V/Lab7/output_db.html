@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+<style>
+	body {
+		font-size: 2em;
+	}
+</style>
+	<h2>Результати роботи веб-сторінки</h2>
+		<img src="img/k.png" alt="">
+		<img src="img/sh.png" alt="">
+		<img src="img/l.png" alt="">
+	<h2>Програмеий код сторінки</h2>
+	<xmp>
+<body>
+	<h1>Розклад руху залізничного транспорту</h1>
+<form method="post">
+  <label for="city">Виберіть місто:</label>
+  <select id="city" name="city">
+    <option value="1">Київ</option>
+    <option value="2">Львів</option>
+    <option value="3">Рівне</option>
+    <option value="4">Шепетівка</option>
+    <option value="5">Житомир</option>
+    <option value="6">Харків</option>
+    <option value="7">Запоріжжя</option>
+    <option value="8">Миколаїв</option>
+    <option value="9">Кропивницький</option>
+    <option value="10">Одеса</option>
+  </select>
+  <input type="submit" value="Пошук">
+</form>
+
+<?php
+function rozklad(){
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+$mysqli = new mysqli("localhost", "root", "", "train");
+
+$result = $mysqli->query("SELECT sc.time, 
+c.name as name, sc.id_train, rou.shlyah FROM schedule sc
+		JOIN stantions st on sc.id_stantion = st.id
+		JOIN city c ON st.id = c.id
+		JOIN route r on sc.id_route = r.id
+		JOIN (
+   			 SELECT r.id AS id, CONCAT(ci.name, '-', c.name) 
+   			 as shlyah FROM route r
+    		JOIN city ci ON r.start = ci.id
+   	 		JOIN city c ON r.finish = c.id) as
+			rou on sc.id_route = rou.id
+		WHERE c.id =" . $_POST['city'] .";");
+$city_name = $mysqli->query("SELECT name FROM city WHERE id = " . 
+$_POST['city'] .";");
+foreach ($city_name as $name) {
+	echo "<h2> Станція " .  $name['name'] ."</h2>";
+}
+echo "<table>";
+echo  "<tr>  <td>Час відправлення</td>  <td>Станція</td>  
+	<td>№ Потягу</td>  <td>Маршрут</td>  </tr>";
+foreach ($result as $row) {
+	echo  "<tr>  <td>". $row['time'] ."</td>  <td>". $row['name'] 
+	."</td>  <td>". $row['id_train'] ."</td>  <td>". $row['shlyah'] 
+	."</td>  </tr>";
+}
+echo "/<table>";
+}
+if(array_key_exists('city',$_POST)){
+   rozklad();
+}
+?>
+</body>
+	</xmp>
+</body>
+</html>

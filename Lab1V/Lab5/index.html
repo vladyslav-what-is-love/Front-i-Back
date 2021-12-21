@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lab 5</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"> </script>
+	<link rel = "stylesheet" href = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"> </script>
+	<script src="script.js"></script>
+</head>
+<body>
+    <h2><p>Додати до  сайту (або до окремої  сторінки) плагін галереї UniteGallery. Створити за допомогою бібліотеки:</p> 
+    <p><ul>
+      <li>Accordion - набір елементів, що розгортаються/згортаються.</li>
+      <li>Menu – випадне меню.</li>
+      <li>Slider - вибір числа за допомогою повзунка.</li>
+    </ul></p>
+  </h2>
+	 <div id="accordion">  
+  <h3>Взаємодії (Interactions) jQuery UI
+</h3>  
+  <div>  
+    <ul>
+    	<li>Draggable - перетягувати HTML-елементи мишкою.</li>
+    	<li>Droppable - призначити HTML-елемент, на який буде розміщено елемент, що перетягується.
+</li>
+    	<li>Resizable - змінює розмір HTML-елемента за допомогою мишки.
+</li>
+    	<li>Selectable - використовується мишка для виділення елемента або групи елементів.</li>
+    	<li>Sortable - дозволяє сортувати елементи на сторінці.
+</li>
+    </ul> 
+  </div>  
+  <h3>Віджети / елементи управління (Widgets) jQuery UI
+</h3>  
+  <div>  
+    <ul>
+    	<li>Accordion - набір елементів, що розгортаються/згортаються.
+</li>
+    	<li>Autocomplete - автодоповнення введення по перших символах.
+</li>
+    	<li>Button - кнопки на сторінці.
+</li>
+    	<li>Datepicker - вибір дати з календаря.
+</li>
+    	<li>Dialog - створення діалогових вікон.
+</li>
+    	<li>Menu – випадне меню.</li>
+    	<li>Progressbar - прогрес виконання деякого процесу.
+</li>
+    	<li>Selectmenu - розширює функціональність базового HTML-елемента.
+</li>
+    	<li>Slider - вибір числа за допомогою повзунка.</li>
+    	<li>Spinner - для зміни значень в текстовому полі введення.
+</li>
+    	<li>Tabs - організація вкладок на сторінці.
+</li>
+    	<li>Tooltip - організація спливаючих підказок.
+</li>
+    </ul> 
+  </div>  
+  <h3>Ефекти (Effects) jQuery UI
+</h3>  
+  <div>  
+     <ul>
+    	<li>Add Class - додає CSS-клас елементу.
+</li>
+    	<li>Color Animation - розширення анімації jQuery.
+</li>
+    	<li>Easing - зміна темпу анімації.
+</li>
+    	<li>Effect - анімаційні ефекти.
+</li>
+    	<li>Hide - приховування елемента з використанням анімаційних ефектів.
+</li>
+    	<li>Remove Class - видалення CSS-класу.</li>
+    	<li>Show - поява елемента з використанням анімаційних ефектів.
+</li>
+    	<li>Switch Class - перемикання класів.
+</li>
+    	<li>Toggle - по черзі відображає і ховає елемент з використанням анімаційних ефектів.
+</li>
+    	<li>Toggle Class - по черзі додає і видаляє клас з елемента (на відміну від Switch Class працює з одним класом).
+</li>
+    </ul> 
+  </div> 
+  <h3>Утиліти (Utilities) jQuery UI
+</h3> 
+  <div>
+  	<ul>
+  		<li>Position - управління позиціонуванням елементу щодо документа, вікна браузера, інших елементів.
+</li>
+  		<li>Widget Factory - дозволяє використовувати всі віджети jQuery UI на сторінці.
+</li>
+  	</ul>
+  </div>
+  <h3>Оформлення jQuery UI</h3> 
+  <div>
+  	Для оформлення бібліотеки можна використовувати один з готових наборів (тем) або сформувати власну тему на сторінці оформлювача тем (ThemeRoller). Створена тема представляє папку з CSS, яку буде потрібно розмістити поруч з основним кодом бібліотеки.
+
+  </div>
+  </div> 
+
+<ul id="menu">
+  <li class="ui-state-disabled"><div>Bag (n/a)</div></li>
+  <li><div>Interactions</div>
+  	<ul>
+  		<li><div>Draggable</div></li>
+  		<li><div>Droppable</div></li>
+  		<li><div>Resizable</div></li>
+  		<li><div>Selectable</div></li>
+  		<li><div>Sortable</div></li>
+  	</ul>
+  	</li>
+  <li><div>Widgets</div>
+  	<ul>
+  		<li><div>Accordion</div></li>
+  		<li><div>Button</div></li>
+  		<li><div>Dialog</div></li>
+  		<li><div>Menu</div></li>
+  		<li><div>Progressbar</div></li>
+  		<li><div>Tabs</div></li>
+  	</ul>
+  	</li>
+  <li><div>Effects</div>
+    <ul>
+      <li><div>Add Class</div></li>
+      <li><div>Easing</div></li>
+      <li><div>Effect</div></li>
+      <li><div>Hide </div></li>
+      <li><div>Switch Class</div></li>
+      <li><div>Toggle Class</div></li>
+    </ul>
+  </li>
+  <li><div>Utilities</div>
+  	<ul>
+  		<li>Position </li>
+  		<li>Widget Factory</li>
+  	</ul>
+  </li>
+  <li><div>Оформлення </div></li>
+</ul>
+<div class="slider_demo">
+	<div id="slider_out">50</div>
+	<div id="slider"></div>
+</div>
+
+<h2>Accordion</h2>
+<xmp>
+   <div id="accordion">  
+  <h3>Взаємодії (Interactions) jQuery UI
+</h3>  
+  <div>  
+    <ul>
+      <li>Draggable - перетягувати HTML-елементи мишкою.</li>
+      <li>Droppable - призначити HTML-елемент, на який буде розміщено елемент, що перетягується.
+</li>
+      <li>Resizable - змінює розмір HTML-елемента за допомогою мишки.
+</li>
+      <li>Selectable - використовується мишка для виділення елемента або групи елементів.</li>
+      <li>Sortable - дозволяє сортувати елементи на сторінці.
+</li>
+    </ul> 
+  </div>  
+  <h3>Віджети / елементи управління (Widgets) jQuery UI
+</h3>  
+  <div>  
+    <ul>
+      <li>Accordion - набір елементів, що розгортаються/згортаються.
+</li>
+      <li>Autocomplete - автодоповнення введення по перших символах.
+</li>
+      <li>Button - кнопки на сторінці.
+</li>
+      <li>Datepicker - вибір дати з календаря.
+</li>
+      <li>Dialog - створення діалогових вікон.
+</li>
+      <li>Menu – випадне меню.</li>
+      <li>Progressbar - прогрес виконання деякого процесу.
+</li>
+      <li>Selectmenu - розширює функціональність базового HTML-елемента.
+</li>
+      <li>Slider - вибір числа за допомогою повзунка.</li>
+      <li>Spinner - для зміни значень в текстовому полі введення.
+</li>
+      <li>Tabs - організація вкладок на сторінці.
+</li>
+      <li>Tooltip - організація спливаючих підказок.
+</li>
+    </ul> 
+  </div>  
+  <h3>Ефекти (Effects) jQuery UI
+</h3>  
+  <div>  
+     <ul>
+      <li>Add Class - додає CSS-клас елементу.
+</li>
+      <li>Color Animation - розширення анімації jQuery.
+</li>
+      <li>Easing - зміна темпу анімації.
+</li>
+      <li>Effect - анімаційні ефекти.
+</li>
+      <li>Hide - приховування елемента з використанням анімаційних ефектів.
+</li>
+      <li>Remove Class - видалення CSS-класу.</li>
+      <li>Show - поява елемента з використанням анімаційних ефектів.
+</li>
+      <li>Switch Class - перемикання класів.
+</li>
+      <li>Toggle - по черзі відображає і ховає елемент з використанням анімаційних ефектів.
+</li>
+      <li>Toggle Class - по черзі додає і видаляє клас з елемента 
+        (на відміну від Switch Class працює з одним класом).
+</li>
+    </ul> 
+  </div> 
+  <h3>Утиліти (Utilities) jQuery UI
+</h3> 
+  <div>
+    <ul>
+      <li>Position - управління позиціонуванням елементу щодо 
+        документа, вікна браузера, інших елементів.
+</li>
+      <li>Widget Factory - дозволяє використовувати всі віджети jQuery UI на сторінці.
+</li>
+    </ul>
+  </div>
+  <h3>Оформлення jQuery UI</h3> 
+  <div>
+    Для оформлення бібліотеки можна використовувати один з готових 
+    наборів (тем) або сформувати власну тему на сторінці оформлювача 
+    тем (ThemeRoller). Створена тема представляє папку з CSS, яку 
+    буде потрібно розмістити поруч з основним кодом бібліотеки.
+
+  </div>
+  </div> 
+</xmp>
+<h2>Menu</h2>
+<xmp>
+
+<ul id="menu">
+  <li class="ui-state-disabled"><div>Bag (n/a)</div></li>
+  <li><div>Interactions</div>
+    <ul>
+      <li><div>Draggable</div></li>
+      <li><div>Droppable</div></li>
+      <li><div>Resizable</div></li>
+      <li><div>Selectable</div></li>
+      <li><div>Sortable</div></li>
+    </ul>
+    </li>
+  <li><div>Widgets</div>
+    <ul>
+      <li><div>Accordion</div></li>
+      <li><div>Button</div></li>
+      <li><div>Dialog</div></li>
+      <li><div>Menu</div></li>
+      <li><div>Progressbar</div></li>
+      <li><div>Tabs</div></li>
+    </ul>
+    </li>
+  <li><div>Effects</div>
+    <ul>
+      <li><div>Add Class</div></li>
+      <li><div>Easing</div></li>
+      <li><div>Effect</div></li>
+      <li><div>Hide </div></li>
+      <li><div>Switch Class</div></li>
+      <li><div>Toggle Class</div></li>
+    </ul>
+  </li>
+  <li><div>Utilities</div>
+    <ul>
+      <li>Position </li>
+      <li>Widget Factory</li>
+    </ul>
+  </li>
+  <li><div>Оформлення </div></li>
+</ul>
+</xmp>
+<h2>Slider</h2>
+<xmp>
+<div class="slider_demo">
+  <div id="slider_out">50</div>
+  <div id="slider"></div>
+</div>  
+</xmp>
+
+ 
+
+</body>
+</html>

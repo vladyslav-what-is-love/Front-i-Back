@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/gis.css">
+  <script src="script.js"></script>
+  <title>Document</title>
+</head>
+<body>
+    <input id="input" type="text">
+    <input type="submit" onclick="gisto()" name="Click">
+
+  <div id="wrapper" >
+    <div style=" left:0px;width: 8px;height:22px;"></div>
+    <div style="left:10px;width: 8px;height:11px;"></div>
+    <div style="left:20px;width: 8px;height:6px;"></div>
+    <div style="left:30px;width: 8px;height:49px;"></div>
+    <div style="left:40px;width: 8px;height:28px;"></div>
+  </div>
+  <xmp>
+function gisto() {
+  let num = document.getElementById('input').value;
+
+  let color = ["red","green", "blue", "yellow"];
+  let array = [];
+  for (var i = 0; i < num; i++) {
+    array[i] = Math.floor(Math.random() * 500);
+  }
+
+  let wrapper = document.createElement("div");
+  wrapper.setAttribute("id", "wrapper");
+  let wrapp = document.getElementById('wrapper');
+
+  let left = 0
+  for (var i = 0; i < num; i++) {
+    
+    let column = document.createElement("div");
+    let p = document.createElement("p");
+    p.textContent = array[i];
+    column.setAttribute("style", `
+      left: ${left}px;
+      height: ${array[i]}px;
+      width: ${(500/num) *0.8}px;
+      background-color: ${color[i%4]};
+      `);
+    column.appendChild(p);
+    wrapper.appendChild(column);
+    left += (500/num);
+  }
+  wrapp.replaceWith(wrapper);
+  
+
+  console.log(array);
+}
+  </xmp>
+</body>
+</html>

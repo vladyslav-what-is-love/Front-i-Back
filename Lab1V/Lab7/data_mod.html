@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<style>
+	body {
+		align-items: center;
+		margin: 0 auto;
+	}
+	table {
+		margin: 0 auto;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #000;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<body>
+	<p><b>Таблиця City</b></p>
+	<table>
+  <tr>
+    <th>Назва стовпця</th>
+    <th>Тип даних</th>
+    <th>Додаткові умови</th>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>INT</td>
+    <td>Primary Key, AUTO_INCREMENT </td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>VARCHAR(35)</td>
+    <td></td>
+  </tr>
+
+</table>
+<p><b>Таблиця Trains</b></p>
+	<table>
+  <tr>
+    <th>Назва стовпця</th>
+    <th>Тип даних</th>
+    <th>Додаткові умови</th>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>INT</td>
+    <td>Primary Key, AUTO_INCREMENT </td>
+  </tr>
+  <tr>
+    <td>company</td>
+    <td>VARCHAR(35)</td>
+    <td></td>
+  </tr>
+</table>
+
+<p><b>Таблиця Route</b></p>
+	<table>
+  <tr>
+    <th>Назва стовпця</th>
+    <th>Тип даних</th>
+    <th>Додаткові умови</th>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>INT</td>
+    <td>Primary Key, AUTO_INCREMENT </td>
+  </tr>
+  <tr>
+    <td>start</td>
+    <td>INT</td>
+    <td>FOREIGN KEY (start) REFERENCES city (id))</td>
+  </tr>
+    <tr>
+    <td>finish</td>
+    <td>INT</td>
+    <td>FOREIGN KEY (finish) REFERENCES city (id))</td>
+  </tr>
+</table>
+
+<p><b>Таблиця Schedule</b></p>
+	<table>
+  <tr>
+    <th>Назва стовпця</th>
+    <th>Тип даних</th>
+    <th>Додаткові умови</th>
+  </tr>
+  <tr>
+    <td>time</td>
+    <td>DATATIME</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>id_stantiom</td>
+    <td>INT</td>
+    <td>FOREIGN KEY (id_stantion) REFERENCES stantions (id))</td>
+  </tr>
+   <tr>
+    <td>id_train</td>
+    <td>INT</td>
+    <td>FOREIGN KEY (id_train) REFERENCES trains (id))</td>
+  </tr>
+   <tr>
+    <td>id_route</td>
+    <td>INT</td>
+    <td>FOREIGN KEY (id_route) REFERENCES route (id))</td>
+  </tr>
+</table>
+</body>
+</html>

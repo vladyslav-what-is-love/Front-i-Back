@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<xmp>
+-- Структура таблиці `city`
+--
+
+CREATE TABLE `city` (
+  `id` int UNSIGNED NOT NULL,
+  `name` varchar(25) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+--
+-- Дамп даних таблиці `city`
+--
+
+INSERT INTO `city` (`id`, `name`) VALUES
+(1, 'Київ'),
+(2, 'Львів'),
+(3, 'Рівне'),
+(4, 'Шепетівка'),
+(5, 'Житомир'),
+(6, 'Харків'),
+(7, 'Запоріжжя'),
+(8, 'Миколаїв'),
+(9, 'Кропивницький'),
+(10, 'Одеса');
+
+
+-- Структура таблиці `route`
+--
+
+CREATE TABLE `route` (
+  `id` int UNSIGNED NOT NULL,
+  `start` int NOT NULL,
+  `finish` int NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+--
+-- Дамп даних таблиці `route`
+--
+
+INSERT INTO `route` (`id`, `start`, `finish`) VALUES
+(1, 2, 1),
+(2, 2, 3),
+(3, 2, 8),
+(4, 2, 6),
+(5, 1, 2),
+(6, 8, 2),
+(7, 6, 2),
+(8, 1, 10),
+(9, 10, 1),
+(10, 9, 1),
+(11, 1, 9),
+(12, 6, 9);
+
+
+-- Структура таблиці `stantions`
+--
+
+CREATE TABLE `stantions` (
+  `id` int UNSIGNED NOT NULL,
+  `name` varchar(35) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `id_city` int NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+--
+-- Дамп даних таблиці `stantions`
+--
+
+INSERT INTO `stantions` (`id`, `name`, `id_city`) VALUES
+(1, 'Київ Центрпльний вокзал', 1),
+(2, 'Львівський Старий вокзал', 2),
+(3, 'Залізничний вокзал Рівне', 3),
+(4, 'Шепетівка', 4),
+(5, 'Житомир', 5),
+(6, 'Харківський вокзал', 6),
+(7, 'Запоріжжя Приміський вокзал', 7),
+(8, 'Миколаїв-пасажирський', 8),
+(9, 'Кропивницький', 9),
+(10, 'Одесса', 10),
+(11, 'Південний', 1);
+
+
+
+-- Структура таблиці `trains`
+--
+
+CREATE TABLE `trains` (
+  `id` int NOT NULL,
+  `company` varchar(25) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+--
+-- Дамп даних таблиці `trains`
+--
+
+INSERT INTO `trains` (`id`, `company`) VALUES
+(1, 'УкрЗалізниця'),
+(2, 'Інтерсіті'),
+(3, 'Інтерсіті'),
+(4, 'УкрЗалізниця'),
+(5, 'Інтерсіті'),
+(6, 'Інтерсіті'),
+(7, 'УкрЗалізниця');
+
+
+-- Структура таблиці `schedule`
+--
+
+CREATE TABLE `schedule` (
+  `time` datetime NOT NULL,
+  `id_stantion` int NOT NULL,
+  `id_train` int NOT NULL,
+  `id_route` int NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
+
+--
+-- Дамп даних таблиці `schedule`
+--
+
+INSERT INTO `schedule` (`time`, `id_stantion`, `id_train`, `id_route`) VALUES
+('2021-12-02 21:30:00', 1, 1, 1),
+('2021-12-02 17:30:00', 2, 1, 1),
+('2021-12-02 15:30:00', 2, 2, 3),
+('2021-12-02 14:30:00', 2, 3, 6),
+('2021-12-02 12:30:00', 2, 4, 8),
+('2021-12-02 00:30:00', 6, 5, 9),
+('2021-12-02 01:30:00', 6, 2, 12),
+('2021-12-02 08:30:00', 7, 1, 6),
+('2021-12-02 20:30:00', 5, 3, 4),
+('2021-12-02 21:30:00', 3, 4, 4),
+('2021-12-03 06:30:00', 4, 4, 1),
+('2021-12-03 15:30:00', 5, 4, 1),
+('2021-12-03 13:30:00', 2, 1, 3),
+('2021-12-04 14:30:00', 3, 2, 1),
+('2021-12-04 15:30:00', 4, 3, 1),
+('2021-12-04 16:30:00', 1, 2, 8),
+('2021-12-04 17:30:00', 9, 2, 8),
+
+
+
+-- Індекси таблиці `route`
+--
+ALTER TABLE `route`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_vendorf1` (`finish`),
+  ADD KEY `fk_vendors2` (`start`);
+
+--
+-- Індекси таблиці `schedule`
+--
+ALTER TABLE `schedule`
+  ADD KEY `fk_st_sch` (`id_stantion`),
+  ADD KEY `fk_tr_sch` (`id_train`),
+  ADD KEY `fk_rou_sch` (`id_route`);
+
+--
+-- Індекси таблиці `stantions`
+--
+ALTER TABLE `stantions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_vendor` (`id_city`);
+
+--
+-- Індекси таблиці `trains`
+--
+ALTER TABLE `trains`
+  ADD PRIMARY KEY (`id`);
+
+	</xmp>
+</body>
+</html>

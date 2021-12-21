@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<p>Вміст завантаженого архіву (точніше кажучи, лише каталог Apache24), розпакуйте в C:\Server\bin\.
+Перейдіть до каталогу c:\Server\bin\Apache24\conf\ і відкрийте файл httpd.conf будь-яким текстовим редактором.
+У ньому нам потрібно розкоментувати деякі рядки і змінити шлях до певних каталогів.</p>
+<p>Відкрийте командний рядок (це можна зробити одночасно натиснувши клавіші Win+X). Виберіть Windows PowerShell (адміністратор) і скопіюйте туди:</p>
+<p><b>c:\Server\bin\Apache24\bin\httpd.exe -k install</b></p>
+<p><b>c:\Server\bin\Apache24\bin\httpd.exe -k start</b></p>
+<p>І якщо все пройшло вдало, то ми отримаємо відповідь:</p>
+<img src="img/indexOf.png" alt="">
+<p>У папці c:\Server\bin\ створюємо каталог PHP і копіюємо вміст архіву php-8.0.0RC6-Win32-VC14-x64.zip.
+У файлі c:\Server\bin\Apache24\conf\httpd.conf в самий кінець додаємо рядки</p>
+<p><b>PHPIniDir "C:/Server/bin/PHP"</b></p>
+<p><b>AddHandler application/x-httpd-php .php</b></p>
+<p><b>LoadModule php_module "C:/Server/bin/php/php8apache2_4.dll"</b></p>
+<p>І перезапускаємо Apache</p>
+<p>У каталозі c:\Server\data\htdocs\ створюємо файл з назвою i.php. Копіюємо в цей файл:</p>
+<p><b><?php phpinfo ();</b></p>
+<p>У браузері відкрийте посилання http://localhost/i.php. Якщо ви бачите те саме, що на картинці, значить PHP працює:</p>
+<img src="img/php.png" alt="">
+</body>
+</html>

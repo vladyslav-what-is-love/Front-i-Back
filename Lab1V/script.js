@@ -36,14 +36,33 @@ let button_list = [
 	new ButtonText(9, ["Тема, Мета, Місце розташування", "Зовнішній вигляд макету", 
 		"HTML-код макету", "Розмітка сторінки за допомогою таблиці", "Розмітка сторінки за допомогою плаваючих блоків", 
 		"Висновок", "HTML-код сторінки завдання", "CSS-код завдання", "Висновки"],
-		["Lab3/tema", "Lab3/layuot", "Lab3/layuotHTML", "Lab3/table", "Lab3/float", "Lab3/sumup1", "Lab3/var5HTML", 
+		["Lab3/tema", "Lab3/layuot", "Lab3/layuotHTML", "Lab3/table", "Lab3/float", "Lab3/sumup1", "Lab3/var7HTML", 
 		"Lab3/css", "Lab3/sumup"]
 		),
 	new ButtonText(9, ["Постановка задачі Лабораторної роботи №4", "Спроби функціонального Застосування JS", 
 		"Схема URL", "Обробник подій", "Підстановка (entity)", 
 		"Вставка (script)", "Масиви 4п", "Виконання 6п", "ВИСНОВКИ"],
 		["Lab4/tema", "Lab4/connect", "Lab4/URL", "Lab4/handler", "Lab4/entity", "Lab4/script", 
-		"Lab4/array", "Lab4/SlideShow", "Lab4/sumup"]
+		"Lab4/array", "Lab4/gist", "Lab4/sumup"]
+		),
+	new ButtonText(9, ["Постановка задачі Лабораторної роботи №5", "Динамічні елементи 3 пункт", 
+		"Галерея UniteGallery", "Фотогалерея", "Слайдер фотографій", 
+		"Слайдер відеоматеріалів", "Кнопки соціальних мереж", "Інформери", "ВИСНОВКИ"],
+		["Lab5/tasks/tema", "Lab5/index", "Lab5/tasks/unitegallery", "Lab5/unitegallery/Lab5/tilesgrid", 
+		"Lab5/unitegallery/Lab5/carousel", "Lab5/unitegallery/Lab5/carousel_video", 
+		"Lab5/tasks/socialnet", "Lab5/tasks/informers", "Lab5/tasks/sumup"]
+		),
+	new ButtonText(6, ["Постановка задачі Лабораторної роботи №6", "Структура роботи", 
+		"Веб-сторінка", "Програмний код", "Підключення", 
+		"Висновки"],
+		["Lab6/tema", "Lab6/strucyure", "Lab6/sample", "Lab6/kod", "Lab6/include",
+		"Lab6/sumup"]
+		),
+	new ButtonText(7, ["Постановка задачі Лабораторної роботи №7", "Опис об'єктної області БД", 
+		"Інфологічна модель, опис", "Датологічна модель, опис. Зв'язки між таблицями", 
+		"Реалізація БД в СУБД MySQL, phpMyAdmin", "Виведення та пошук в БД", "Висновки"],
+		["Lab7/tema", "Lab7/op_ob_mod", "Lab7/info_mod", "Lab7/data_mod", "Lab7/relise_db",
+		"Lab7/output_db", "Lab7/sumup"]
 		)
 ]
 

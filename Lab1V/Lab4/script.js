@@ -15,7 +15,7 @@ function creare_input() {
 	}
 
 
-	text = "Масив: " + array.join(", ") + " Між min i max " + array.join(", ")+ " К-ть між "+ array.length;
+	text = "Масив: " + num.join(", ") + " Між min i max " + array.join(", ")+ " К-ть між "+ array.length;
 	let output = document.getElementById('output');
 
 	data = document.createElement('h3');
@@ -25,49 +25,38 @@ function creare_input() {
   	output.appendChild(data);
 }
 
-function array(){
-	var size = document.getElementById('size').value;
-	var Arr = Array.from({length: size}, () => Math.floor(Math.random() * size));
-	
 
-  	
-	  let maxPar = 0;
-	  let minPar = size;
-	  let maxNePar = 0;
-	  let minNePar = size;
-	for(let i = 0; i<size;i++){
+function gisto() {
+	let num = document.getElementById('input').value;
 
-		if ( i%2==0 && Arr[i]>maxPar){
-			maxPar = Arr[i] ;
-		}
-		if (i%2==0 && Arr[i]<minPar){
-			minPar = Arr[i];
-		}
-		if ( i%2!=0 && Arr[i]>maxNePar){
-			maxNePar = Arr[i] ;
-		}
-		if (i%2!=0 && Arr[i]<minNePar){
-			minNePar = Arr[i];
-		}
+	let color = ["red","green", "blue", "yellow"];
+	let array = [];
+	for (var i = 0; i < num; i++) {
+		array[i] = Math.floor(Math.random() * 500);
 	}
-	console.log(maxPar, minPar, maxNePar, minNePar);
-	let arr = Arr;
 
-	for (let i = 0, l = arr.length, k = l - 1; i < k; i++) {
-        let indexMin = i;
-        for (let j = i + 1; j < l; j++) {
-            if (arr[indexMin] > arr[j]) {
-                indexMin = j;
-            }
-        }
-        if (indexMin !== i) {
-            [arr[i], arr[indexMin]] = [arr[indexMin], arr[i]];
-        }
-    }
+	let wrapper = document.createElement("div");
+	wrapper.setAttribute("id", "wrapper");
+	let wrapp = document.getElementById('wrapper');
 
+	let left = 0
+	for (var i = 0; i < num; i++) {
+		
+		let column = document.createElement("div");
+		let p = document.createElement("p");
+		p.textContent = array[i];
+		column.setAttribute("style", `
+			left: ${left}px;
+			height: ${array[i]}px;
+			width: ${(500/num) *0.8}px;
+			background-color: ${color[i%4]};
+			`);
+		column.appendChild(p);
+		wrapper.appendChild(column);
+		left += (500/num);
+	}
+	wrapp.replaceWith(wrapper);
 	
-	text = "Масив: " + Arr + "<br>"+'Максимальний і мінімальний елементи з парним індексом: ' + maxPar +" "+ minPar + "<br>" + 'Максимальний і мінімальний елементи з непарним індексом: ' + maxNePar +" "+ minNePar+"<br>"+ 'Масив відсовтований вибором: '+arr;
 
-
-	document.getElementById("output1").innerHTML = text;
+	console.log(array);
 }
